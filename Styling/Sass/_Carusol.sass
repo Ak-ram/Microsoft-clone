@@ -1,0 +1,67 @@
+.carousel
+    .slide
+        // box-shadow: 3px 6px 10px 1px #aaa
+        .carousel-control
+            top: 35%
+            margin: 20px -6px
+            width: 35px
+            height: 35px
+            border-radius: 5px
+            background: #000000
+            visibility: hidden
+            transition: visibility, transform .5s
+            i
+                color: #ffffff
+                font-size: 20px
+        &:hover .carousel-control
+            visibility: visible
+            box-shadow: 0 0 5px #ccc
+            transform: translate(0px, 20px)
+
+        .G-a
+            h2
+                font-size: 24px
+            position: absolute
+            width: 470px
+            color: #000
+            left: 10%
+            top: 33%
+            text-align: left
+            transition: transform .4s
+        &:hover .G-animate
+            transform: translate(-15px, 0)
+            
+        .G-b
+            h1
+                font-size: 24px
+            position: absolute
+            width: 450px
+            left: 50%
+            top: 5%
+            color: #000
+            text-align: left
+            transition: transform .4s
+        .carousel-indicators
+            align-items: center
+            button:not(.play)
+                background: transparent
+                border-radius: 50%
+                width: 4px
+                height: 4px
+                border: 1px solid
+            button.active
+                background: #000
+            button.play
+                border: none
+                margin-left: 15px
+                padding: 10px
+                border-radius: 2px
+                background: transparent
+                font-size: 10px
+                .fa-play
+                    -webkit-text-stroke-color: black
+                    -webkit-text-stroke-width: 1px
+                    color: transparent
+                &:hover .fa-play
+                    -webkit-text-stroke-color: red 
+                    /*! Add Play slide tooltip and button.play black background color */

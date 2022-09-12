@@ -1,0 +1,12 @@
+- var BaseSocialIconLink = "https://www.microsoft.com/onerfstatics/marketingsites-neu-prod/_h/85288795/coreui.statics/images/social/"
+//- Footer Social List Template
+mixin social(head, socila_list)
+            ul.mc-social=head
+                each val in socila_list 
+                    li: a(href='#')
+                        img(src= BaseSocialIconLink + val, alt="", srcset="")
+.divider
+.follow_mc
+    .container
+        +social('Follow Microsoft',['facebook.png', 'twitter.png', 'linkedin.png'])
+        .divider

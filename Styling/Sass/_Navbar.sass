@@ -1,0 +1,75 @@
+.navbar
+    .navbar-brand
+        margin-left: 9px
+        margin-right: 10px
+    img.brand
+        width: 110px
+        max-width: 160%
+    .navbar-collapse
+        justify-content: space-between
+        .navbar-list    // Left Navbar
+            flex-basis: 70%
+            justify-content: flex-start
+            li
+                position: relative
+                a
+                    font-size: $fontBaseSize
+                    &::after
+                        content: ''
+                        position: absolute
+                        left: 50%
+                        top: 30px
+                        height: 2px
+                        width: 0%
+                        transform: translate(-50%,-50%)
+                        background: #000
+                        transition: width .5s 
+                &:hover ::after
+                    width: 100%
+        ul:nth-child(2)   // Right Navbar
+            align-items: center
+            flex-basis: 25%
+            justify-content: space-evenly
+            a
+                font-size: $fontBaseSize+3
+            li:first-of-type
+                margin-right: 10px
+                a
+                    font-size: $fontBaseSize
+            li:nth-child(2)
+                i
+                    transform: rotate(90deg)
+            .personal_account
+                position: relative
+                top: 0px
+                left: 0
+                width: 35px
+                height: 35px
+                border-radius: 50%
+                overflow: hidden
+                img.personal_Avatar
+                    max-width: 35px
+                    max-height: 35px
+                    transform: translate(-50%, -50%)
+                    position: absolute
+                    left: 50%
+                    top: 50%
+            li.dropdown
+                .dropdown-menu
+                    display: grid
+                    position: absolute
+                    right: -105px
+                    top: 43px
+                    grid-template-columns: repeat(6,154px)
+                    align-items: flex-start
+                    gap: 0px 10px
+                    padding: 50px 5px 0 5px
+                    background: #f2f2f2
+                    display: none
+                    li
+                        margin-bottom: 20px
+                        margin-top: 20px
+                button.btn
+                    grid-column: 1/7
+                    background: $mainColor
+                    border-bottom: 2px solid 
